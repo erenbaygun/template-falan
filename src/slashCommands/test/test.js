@@ -8,6 +8,6 @@ module.exports = {
     permissions: [],
 
     run: async (client, interaction) => {
-        interaction.reply({ content: "you runned the test command" })
+        interaction.reply({ content: "You runned the test command" })
     }
 }

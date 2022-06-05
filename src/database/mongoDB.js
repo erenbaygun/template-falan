@@ -1,4 +1,3 @@
-const minerDB = require("./schemas/miner")
 const prefixDB = require("./schemas/prefix")
 
 module.exports.updatePrefix = async function (serverID, newPrefix) {

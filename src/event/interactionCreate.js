@@ -1,6 +1,5 @@
 const Discord = require('discord.js');
 const database = require('../database/mongoDB');
-const minerDB = require('../database/schemas/miner')
 const { emoji } = require('../../config');
 
 module.exports = async (client, interaction) => {
@@ -22,13 +21,6 @@ module.exports = async (client, interaction) => {
         } catch (e) {
             console.log(e);
             await interaction.reply({ content: client.language.ERROR, ephemeral: true });
-        }
-    } else if (interaction.isButton()) {
-        if (interaction.customId.startsWith('yes')) {
-            return
-        }
-        else if (interaction.customId == 'mine') {
-
         }
     }
 };

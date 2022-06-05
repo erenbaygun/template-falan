@@ -1,5 +1,4 @@
 const database = require('../../database/mongoDB');
-const minerDB = require('../../database/schemas/miner')
 
 module.exports = {
     name: 'test',
@@ -11,6 +10,6 @@ module.exports = {
     permissions: [],
 
     run: async (client, message, args) => {
-        message.reply('you runned the test command')
+        message.reply('You runned the test command')
     }
 }

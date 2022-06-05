@@ -7,7 +7,9 @@ module.exports = {
     mongoose: "",
 
     emoji: {
-        emoji: '<:name:id>',
-        gifemoji: '<a:name:id>'
+        emojiname: '<:name:id>',
+        animatedemojiname: '<a:name:id>'
     }
 };
+
+// This file is a example for the config.js file

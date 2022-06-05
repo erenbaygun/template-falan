@@ -1,6 +1,5 @@
 const Discord = require('discord.js');
 const database = require('../database/mongoDB');
-const minerDB = require('../database/schemas/miner');
 const prefixDB = require('../database/schemas/prefix');
 
 module.exports = async (client, message) => {
@@ -11,7 +10,7 @@ module.exports = async (client, message) => {
     if (!data) prefix = client.config.prefix
     else prefix = data.prefix
 
-    if (message.content.match(new RegExp(`^<@!?${client.user.id}>( |)$`))) { return message.channel.send(`Selam, Ben ${client.user.username}! Bu sunucudaki ön ekim \`${prefix}\`\n\`${prefix}help\` yazarak tüm komutlarıma ulaşabilirsin.`) }
+    if (message.content.match(new RegExp(`^<@!?${client.user.id}>( |)$`))) { return message.channel.send(`Hi, I'm ${client.user.username}! My prefix is: \`${prefix}\`\nUse \`${prefix}help\` for more information.`) }
     if (!message.content.startsWith(prefix)) { return }
 
     const command = message.content.split(' ')[0].slice(prefix.length).toLowerCase();
